@@ -1,0 +1,60 @@
+### https://dummyapi.io/docs/user
+### normalt bruges Post-man, men fra dette semester bruger vi blot intellij's version som virker fornuftigt
+
+### GET request with a header (all users)
+GET https://dummyapi.io/data/v1/user
+Accept: application/json
+app-id: 63188ed2f39baab12b4aaa7e
+
+### GET specific user
+GET https://dummyapi.io/data/v1/user/63188fae5764d14430292dba
+Accept: application/json
+app-id: 63188ed2f39baab12b4aaa7e
+
+
+### POST new user
+POST https://dummyapi.io/data/v1/user/create
+Content-Type: application/json
+app-id: 63188ed2f39baab12b4aaa7e
+
+{
+  "title": "dr",
+  "firstName": "Owais",
+  "lastName": "Dashti",
+  "picture": "https://randomuser.me/api/portraits/man/58.jpg",
+  "gender": "male",
+  "email": "cph-od@cphbusiness.dk",
+  "dateOfBirth": "1998-11-01T00:26:49.610Z",
+  "phone": "60606060",
+  "location": {
+    "street": "strøget",
+    "city": "Lyngby",
+    "state": "København",
+    "country": "Denmark",
+    "timezone": "0:00"
+  }
+}
+
+### Update new user (VÆR OPMÆRKSOM PÅ AT DET ER PUT VI BRUGER, SÅ BEHØVER VI HELLER IKKE PARAMETER I LINKET)
+PUT https://dummyapi.io/data/v1/user/63188fae5764d14430292dba
+Content-Type: application/json
+app-id: 63188ed2f39baab12b4aaa7e
+
+{
+  "location": {
+    "street": "Strøget nr 2",
+    "city": "Lyngby",
+    "state": "Rønne",
+    "country": "Denmark",
+    "timezone": "0:00",
+    "test": "test"
+  }
+
+}
+
+### Delete user
+DELETE https://dummyapi.io/data/v1/user/63188fae5764d14430292dba
+Content-Type: application/json
+app-id: 63188ed2f39baab12b4aaa7e
+
+

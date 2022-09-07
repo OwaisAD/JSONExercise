@@ -1,0 +1,4 @@
+### Vejr for Roskilde
+GET https://vejr.eu/api.php?location=Ringsted&degree=C
+Accept: application/json
+User-Agent: server
